@@ -9,23 +9,43 @@
 /* Begin PBXBuildFile section */
 		7CDECA04278AF8E6004DDEBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA03278AF8E6004DDEBA /* AppDelegate.swift */; };
 		7CDECA06278AF8E6004DDEBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA05278AF8E6004DDEBA /* SceneDelegate.swift */; };
-		7CDECA08278AF8E6004DDEBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA07278AF8E6004DDEBA /* ViewController.swift */; };
+		7CDECA08278AF8E6004DDEBA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA07278AF8E6004DDEBA /* MainViewController.swift */; };
 		7CDECA0B278AF8E6004DDEBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDECA09278AF8E6004DDEBA /* Main.storyboard */; };
 		7CDECA0E278AF8E6004DDEBA /* EcommerceWithViper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA0C278AF8E6004DDEBA /* EcommerceWithViper.xcdatamodeld */; };
 		7CDECA10278AF8E9004DDEBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CDECA0F278AF8E9004DDEBA /* Assets.xcassets */; };
 		7CDECA13278AF8E9004DDEBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDECA11278AF8E9004DDEBA /* LaunchScreen.storyboard */; };
+		7CDECA24278AFCFB004DDEBA /* MainViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA23278AFCFB004DDEBA /* MainViewProtocols.swift */; };
+		7CDECA26278B002C004DDEBA /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA25278B002C004DDEBA /* Food.swift */; };
+		7CDECA28278B00B2004DDEBA /* FoodResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA27278B00B2004DDEBA /* FoodResponse.swift */; };
+		7CDECA2A278B01B5004DDEBA /* MainViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA29278B01B5004DDEBA /* MainViewInteractor.swift */; };
+		7CDECA2C278B059A004DDEBA /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA2B278B059A004DDEBA /* FoodCollectionViewCell.swift */; };
+		7CDECA2E278B05EE004DDEBA /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA2D278B05EE004DDEBA /* FoodDetailViewController.swift */; };
+		7CDECA32278B079D004DDEBA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7CDECA31278B079D004DDEBA /* Alamofire */; };
+		7CDECA34278B09BE004DDEBA /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA33278B09BE004DDEBA /* MainViewPresenter.swift */; };
+		7CDECA36278B0AB7004DDEBA /* MainViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA35278B0AB7004DDEBA /* MainViewRouter.swift */; };
+		7CDECA39278B12FB004DDEBA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7CDECA38278B12FB004DDEBA /* Kingfisher */; };
+		7CDECA3D278B26C6004DDEBA /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA3C278B26C6004DDEBA /* CartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7CDECA00278AF8E6004DDEBA /* EcommerceWithViper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcommerceWithViper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDECA03278AF8E6004DDEBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CDECA05278AF8E6004DDEBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7CDECA07278AF8E6004DDEBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7CDECA07278AF8E6004DDEBA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7CDECA0A278AF8E6004DDEBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7CDECA0D278AF8E6004DDEBA /* EcommerceWithViper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EcommerceWithViper.xcdatamodel; sourceTree = "<group>"; };
 		7CDECA0F278AF8E9004DDEBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CDECA12278AF8E9004DDEBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7CDECA14278AF8E9004DDEBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CDECA23278AFCFB004DDEBA /* MainViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewProtocols.swift; sourceTree = "<group>"; };
+		7CDECA25278B002C004DDEBA /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		7CDECA27278B00B2004DDEBA /* FoodResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResponse.swift; sourceTree = "<group>"; };
+		7CDECA29278B01B5004DDEBA /* MainViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewInteractor.swift; sourceTree = "<group>"; };
+		7CDECA2B278B059A004DDEBA /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
+		7CDECA2D278B05EE004DDEBA /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		7CDECA33278B09BE004DDEBA /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
+		7CDECA35278B0AB7004DDEBA /* MainViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewRouter.swift; sourceTree = "<group>"; };
+		7CDECA3C278B26C6004DDEBA /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CDECA39278B12FB004DDEBA /* Kingfisher in Frameworks */,
+				7CDECA32278B079D004DDEBA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,9 +80,12 @@
 		7CDECA02278AF8E6004DDEBA /* EcommerceWithViper */ = {
 			isa = PBXGroup;
 			children = (
+				7CDECA3A278B2571004DDEBA /* addtocart-module */,
+				7CDECA1B278AFBF1004DDEBA /* food-detail-module */,
+				7CDECA1A278AFBD7004DDEBA /* main-module */,
+				7CDECA22278AFC92004DDEBA /* entity */,
 				7CDECA03278AF8E6004DDEBA /* AppDelegate.swift */,
 				7CDECA05278AF8E6004DDEBA /* SceneDelegate.swift */,
-				7CDECA07278AF8E6004DDEBA /* ViewController.swift */,
 				7CDECA09278AF8E6004DDEBA /* Main.storyboard */,
 				7CDECA0F278AF8E9004DDEBA /* Assets.xcassets */,
 				7CDECA11278AF8E9004DDEBA /* LaunchScreen.storyboard */,
@@ -68,6 +93,108 @@
 				7CDECA0C278AF8E6004DDEBA /* EcommerceWithViper.xcdatamodeld */,
 			);
 			path = EcommerceWithViper;
+			sourceTree = "<group>";
+		};
+		7CDECA1A278AFBD7004DDEBA /* main-module */ = {
+			isa = PBXGroup;
+			children = (
+				7CDECA20278AFC59004DDEBA /* router */,
+				7CDECA1F278AFC53004DDEBA /* presenter */,
+				7CDECA1E278AFC40004DDEBA /* interactor */,
+				7CDECA1D278AFC36004DDEBA /* protocols */,
+				7CDECA21278AFC63004DDEBA /* collectionView */,
+				7CDECA1C278AFC2D004DDEBA /* view */,
+			);
+			path = "main-module";
+			sourceTree = "<group>";
+		};
+		7CDECA1B278AFBF1004DDEBA /* food-detail-module */ = {
+			isa = PBXGroup;
+			children = (
+				7CDECA2F278B0687004DDEBA /* view */,
+			);
+			path = "food-detail-module";
+			sourceTree = "<group>";
+		};
+		7CDECA1C278AFC2D004DDEBA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7CDECA07278AF8E6004DDEBA /* MainViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		7CDECA1D278AFC36004DDEBA /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7CDECA23278AFCFB004DDEBA /* MainViewProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		7CDECA1E278AFC40004DDEBA /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7CDECA29278B01B5004DDEBA /* MainViewInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		7CDECA1F278AFC53004DDEBA /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7CDECA33278B09BE004DDEBA /* MainViewPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		7CDECA20278AFC59004DDEBA /* router */ = {
+			isa = PBXGroup;
+			children = (
+				7CDECA35278B0AB7004DDEBA /* MainViewRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		7CDECA21278AFC63004DDEBA /* collectionView */ = {
+			isa = PBXGroup;
+			children = (
+				7CDECA2B278B059A004DDEBA /* FoodCollectionViewCell.swift */,
+			);
+			path = collectionView;
+			sourceTree = "<group>";
+		};
+		7CDECA22278AFC92004DDEBA /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				7CDECA25278B002C004DDEBA /* Food.swift */,
+				7CDECA27278B00B2004DDEBA /* FoodResponse.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		7CDECA2F278B0687004DDEBA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7CDECA2D278B05EE004DDEBA /* FoodDetailViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		7CDECA3A278B2571004DDEBA /* addtocart-module */ = {
+			isa = PBXGroup;
+			children = (
+				7CDECA3B278B26AD004DDEBA /* view */,
+			);
+			path = "addtocart-module";
+			sourceTree = "<group>";
+		};
+		7CDECA3B278B26AD004DDEBA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7CDECA3C278B26C6004DDEBA /* CartViewController.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +213,10 @@
 			dependencies = (
 			);
 			name = EcommerceWithViper;
+			packageProductDependencies = (
+				7CDECA31278B079D004DDEBA /* Alamofire */,
+				7CDECA38278B12FB004DDEBA /* Kingfisher */,
+			);
 			productName = EcommerceWithViper;
 			productReference = 7CDECA00278AF8E6004DDEBA /* EcommerceWithViper.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +245,10 @@
 				Base,
 			);
 			mainGroup = 7CDEC9F7278AF8E6004DDEBA;
+			packageReferences = (
+				7CDECA30278B079D004DDEBA /* XCRemoteSwiftPackageReference "Alamofire" */,
+				7CDECA37278B12FB004DDEBA /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 7CDECA01278AF8E6004DDEBA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,10 +276,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CDECA08278AF8E6004DDEBA /* ViewController.swift in Sources */,
+				7CDECA08278AF8E6004DDEBA /* MainViewController.swift in Sources */,
+				7CDECA34278B09BE004DDEBA /* MainViewPresenter.swift in Sources */,
 				7CDECA0E278AF8E6004DDEBA /* EcommerceWithViper.xcdatamodeld in Sources */,
 				7CDECA04278AF8E6004DDEBA /* AppDelegate.swift in Sources */,
+				7CDECA36278B0AB7004DDEBA /* MainViewRouter.swift in Sources */,
+				7CDECA2E278B05EE004DDEBA /* FoodDetailViewController.swift in Sources */,
+				7CDECA3D278B26C6004DDEBA /* CartViewController.swift in Sources */,
+				7CDECA24278AFCFB004DDEBA /* MainViewProtocols.swift in Sources */,
+				7CDECA28278B00B2004DDEBA /* FoodResponse.swift in Sources */,
 				7CDECA06278AF8E6004DDEBA /* SceneDelegate.swift in Sources */,
+				7CDECA2A278B01B5004DDEBA /* MainViewInteractor.swift in Sources */,
+				7CDECA2C278B059A004DDEBA /* FoodCollectionViewCell.swift in Sources */,
+				7CDECA26278B002C004DDEBA /* Food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +506,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7CDECA30278B079D004DDEBA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		7CDECA37278B12FB004DDEBA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7CDECA31278B079D004DDEBA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7CDECA30278B079D004DDEBA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		7CDECA38278B12FB004DDEBA /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7CDECA37278B12FB004DDEBA /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7CDECA0C278AF8E6004DDEBA /* EcommerceWithViper.xcdatamodeld */ = {

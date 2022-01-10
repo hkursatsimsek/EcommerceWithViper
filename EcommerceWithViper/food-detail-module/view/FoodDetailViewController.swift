@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FoodDetailViewController.swift
 //  EcommerceWithViper
 //
 //  Created by Kürşat Şimşek on 9.01.2022.
@@ -7,13 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FoodDetailViewController: UIViewController {
+    
+    var food:Food?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        
     }
 
-
 }
-
