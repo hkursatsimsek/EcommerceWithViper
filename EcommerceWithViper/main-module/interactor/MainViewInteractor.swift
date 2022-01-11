@@ -12,7 +12,7 @@ class MainViewInteractor:PresenterToInteractorMainViewProtocol {
     var mainPresenter: InteractorToPresenterMainViewProtocol?
     
     func getAllFoods() {
-        guard let url = URL(string: "http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php") else {return}
+        guard let url = URL(string: "\(Environment.baseURL())/tumYemekleriGetir.php") else {return}
         
         AF.request(url,method: .get).response { response in
             if let data = response.data {

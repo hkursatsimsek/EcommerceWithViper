@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C38B025278C191400425221 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C38B024278C191400425221 /* Environment.swift */; };
 		7CDECA04278AF8E6004DDEBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA03278AF8E6004DDEBA /* AppDelegate.swift */; };
 		7CDECA06278AF8E6004DDEBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA05278AF8E6004DDEBA /* SceneDelegate.swift */; };
 		7CDECA08278AF8E6004DDEBA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA07278AF8E6004DDEBA /* MainViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C38B024278C191400425221 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		7CDECA00278AF8E6004DDEBA /* EcommerceWithViper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcommerceWithViper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDECA03278AF8E6004DDEBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CDECA05278AF8E6004DDEBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C38B023278C18E600425221 /* configs */ = {
+			isa = PBXGroup;
+			children = (
+				7C38B024278C191400425221 /* Environment.swift */,
+			);
+			path = configs;
+			sourceTree = "<group>";
+		};
+		7C38B026278C2BF600425221 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		7C38B027278C2BFB00425221 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		7C38B028278C2C0200425221 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		7C38B029278C2C0600425221 /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
 		7CDEC9F7278AF8E6004DDEBA = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +118,7 @@
 		7CDECA02278AF8E6004DDEBA /* EcommerceWithViper */ = {
 			isa = PBXGroup;
 			children = (
+				7C38B023278C18E600425221 /* configs */,
 				7CDECA3A278B2571004DDEBA /* addtocart-module */,
 				7CDECA1B278AFBF1004DDEBA /* food-detail-module */,
 				7CDECA1A278AFBD7004DDEBA /* main-module */,
@@ -111,6 +150,10 @@
 		7CDECA1B278AFBF1004DDEBA /* food-detail-module */ = {
 			isa = PBXGroup;
 			children = (
+				7C38B029278C2C0600425221 /* router */,
+				7C38B028278C2C0200425221 /* presenter */,
+				7C38B027278C2BFB00425221 /* interactor */,
+				7C38B026278C2BF600425221 /* protocols */,
 				7CDECA2F278B0687004DDEBA /* view */,
 			);
 			path = "food-detail-module";
@@ -279,6 +322,7 @@
 				7CDECA08278AF8E6004DDEBA /* MainViewController.swift in Sources */,
 				7CDECA34278B09BE004DDEBA /* MainViewPresenter.swift in Sources */,
 				7CDECA0E278AF8E6004DDEBA /* EcommerceWithViper.xcdatamodeld in Sources */,
+				7C38B025278C191400425221 /* Environment.swift in Sources */,
 				7CDECA04278AF8E6004DDEBA /* AppDelegate.swift in Sources */,
 				7CDECA36278B0AB7004DDEBA /* MainViewRouter.swift in Sources */,
 				7CDECA2E278B05EE004DDEBA /* FoodDetailViewController.swift in Sources */,

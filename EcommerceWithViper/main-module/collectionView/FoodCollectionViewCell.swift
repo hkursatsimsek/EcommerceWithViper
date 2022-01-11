@@ -14,7 +14,7 @@ class FoodCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var foodPriceLabel: UILabel!
     
     func setFoodImage(foodPictureName:String) {
-        if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(foodPictureName)") {
+        if let url = URL(string: "\(Environment.baseURL())/resimler/\(foodPictureName)") {
             DispatchQueue.main.async {
                 self.foodImageView.kf.setImage(with: url)
             }

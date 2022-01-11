@@ -136,6 +136,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="SEPETE EKLE"/>
+                                <connections>
+                                    <action selector="addToCart:" destination="goz-Ny-0aa" eventType="touchUpInside" id="530-nb-3Ns"/>
+                                </connections>
                             </button>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="H4a-HH-psz">
                                 <rect key="frame" x="300" y="635" width="94" height="32"/>
@@ -170,6 +173,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="X7i-2F-0IV"/>
+                    <connections>
+                        <outlet property="detailFoodCount" destination="eo2-0A-9wg" id="Ax5-0F-G9Q"/>
+                        <outlet property="detailFoodName" destination="UC2-YP-qKp" id="fQ8-38-h0h"/>
+                        <outlet property="detailFoodPrice" destination="vak-EN-1YU" id="LNR-hw-LNh"/>
+                        <outlet property="detailImageView" destination="OKH-Ua-qQK" id="7XA-pD-eyn"/>
+                        <outlet property="detailStepper" destination="H4a-HH-psz" id="Rsj-TU-1t2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eA0-oC-vSE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -216,6 +226,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0KH-S0-MQA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eyY-fP-o5e">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
