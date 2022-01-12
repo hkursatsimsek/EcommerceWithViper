@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7C38B025278C191400425221 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C38B024278C191400425221 /* Environment.swift */; };
+		7C38B02B278D4E9400425221 /* FoodDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C38B02A278D4E9400425221 /* FoodDetailProtocols.swift */; };
+		7C38B02D278D4EA200425221 /* FoodDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C38B02C278D4EA200425221 /* FoodDetailInteractor.swift */; };
+		7C38B02F278D4EAF00425221 /* FoodDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C38B02E278D4EAF00425221 /* FoodDetailPresenter.swift */; };
+		7C38B031278D4EBD00425221 /* FoodDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C38B030278D4EBD00425221 /* FoodDetailRouter.swift */; };
+		7C38B033278D518900425221 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C38B032278D518900425221 /* Cart.swift */; };
 		7CDECA04278AF8E6004DDEBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA03278AF8E6004DDEBA /* AppDelegate.swift */; };
 		7CDECA06278AF8E6004DDEBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA05278AF8E6004DDEBA /* SceneDelegate.swift */; };
 		7CDECA08278AF8E6004DDEBA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDECA07278AF8E6004DDEBA /* MainViewController.swift */; };
@@ -30,6 +35,11 @@
 
 /* Begin PBXFileReference section */
 		7C38B024278C191400425221 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		7C38B02A278D4E9400425221 /* FoodDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailProtocols.swift; sourceTree = "<group>"; };
+		7C38B02C278D4EA200425221 /* FoodDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailInteractor.swift; sourceTree = "<group>"; };
+		7C38B02E278D4EAF00425221 /* FoodDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailPresenter.swift; sourceTree = "<group>"; };
+		7C38B030278D4EBD00425221 /* FoodDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailRouter.swift; sourceTree = "<group>"; };
+		7C38B032278D518900425221 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		7CDECA00278AF8E6004DDEBA /* EcommerceWithViper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcommerceWithViper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDECA03278AF8E6004DDEBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CDECA05278AF8E6004DDEBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +84,7 @@
 		7C38B026278C2BF600425221 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				7C38B02A278D4E9400425221 /* FoodDetailProtocols.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -81,6 +92,7 @@
 		7C38B027278C2BFB00425221 /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				7C38B02C278D4EA200425221 /* FoodDetailInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -88,6 +100,7 @@
 		7C38B028278C2C0200425221 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				7C38B02E278D4EAF00425221 /* FoodDetailPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -95,6 +108,7 @@
 		7C38B029278C2C0600425221 /* router */ = {
 			isa = PBXGroup;
 			children = (
+				7C38B030278D4EBD00425221 /* FoodDetailRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -212,6 +226,7 @@
 			children = (
 				7CDECA25278B002C004DDEBA /* Food.swift */,
 				7CDECA27278B00B2004DDEBA /* FoodResponse.swift */,
+				7C38B032278D518900425221 /* Cart.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -319,8 +334,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C38B02F278D4EAF00425221 /* FoodDetailPresenter.swift in Sources */,
 				7CDECA08278AF8E6004DDEBA /* MainViewController.swift in Sources */,
+				7C38B033278D518900425221 /* Cart.swift in Sources */,
 				7CDECA34278B09BE004DDEBA /* MainViewPresenter.swift in Sources */,
+				7C38B031278D4EBD00425221 /* FoodDetailRouter.swift in Sources */,
+				7C38B02B278D4E9400425221 /* FoodDetailProtocols.swift in Sources */,
 				7CDECA0E278AF8E6004DDEBA /* EcommerceWithViper.xcdatamodeld in Sources */,
 				7C38B025278C191400425221 /* Environment.swift in Sources */,
 				7CDECA04278AF8E6004DDEBA /* AppDelegate.swift in Sources */,
@@ -329,6 +348,7 @@
 				7CDECA3D278B26C6004DDEBA /* CartViewController.swift in Sources */,
 				7CDECA24278AFCFB004DDEBA /* MainViewProtocols.swift in Sources */,
 				7CDECA28278B00B2004DDEBA /* FoodResponse.swift in Sources */,
+				7C38B02D278D4EA200425221 /* FoodDetailInteractor.swift in Sources */,
 				7CDECA06278AF8E6004DDEBA /* SceneDelegate.swift in Sources */,
 				7CDECA2A278B01B5004DDEBA /* MainViewInteractor.swift in Sources */,
 				7CDECA2C278B059A004DDEBA /* FoodCollectionViewCell.swift in Sources */,

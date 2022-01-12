@@ -100,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2775.36231884058" y="71.651785714285708"/>
+            <point key="canvasLocation" x="2730" y="-275"/>
         </scene>
         <!--Food Detail View Controller-->
         <scene sceneID="FHp-7j-TwM">
@@ -142,8 +142,11 @@
                             </button>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="H4a-HH-psz">
                                 <rect key="frame" x="300" y="635" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperAction:" destination="goz-Ny-0aa" eventType="valueChanged" id="Dsw-IA-X4c"/>
+                                </connections>
                             </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adet : " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo2-0A-9wg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adet : 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo2-0A-9wg">
                                 <rect key="frame" x="20" y="635" width="275" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -183,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eA0-oC-vSE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3636.2318840579715" y="71.651785714285708"/>
+            <point key="canvasLocation" x="3591" y="-275"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4qw-5X-pG5">
@@ -202,7 +205,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BoN-O1-TWl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1865.217391304348" y="71.651785714285708"/>
+            <point key="canvasLocation" x="1820" y="-275"/>
         </scene>
         <!--Cart View Controller-->
         <scene sceneID="z7T-4S-eEB">
@@ -218,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PU8-8b-gTF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1632" y="828"/>
+            <point key="canvasLocation" x="2730" y="406"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VWa-Ny-yt6">
