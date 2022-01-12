@@ -23,7 +23,7 @@ class FoodDetailInteractor:PresenterToInteractorFoodDetailProtocol {
             "yemek_resim_adi":yemek_resim_adi,
             "yemek_siparis_adet":yemek_siparis_adet,
             "yemek_fiyat":yemek_fiyat,
-            "kullanici_adi":"Kürşat"
+            "kullanici_adi":"kursat_simsek"
         ]
 
         let url = "\(Environment.baseURL())/sepeteYemekEkle.php"

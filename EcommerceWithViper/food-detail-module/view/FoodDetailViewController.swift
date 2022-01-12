@@ -15,11 +15,14 @@ class FoodDetailViewController: UIViewController {
     @IBOutlet weak var detailFoodPrice: UILabel!
     @IBOutlet weak var detailFoodCount: UILabel!
     @IBOutlet weak var detailStepper: UIStepper!
+    @IBOutlet weak var totalFoodPrice: UILabel!
     
     var food:Food?
-    var foodCount:Int = 0
+    var foodCount:Int = 1
     var foodDetailPresenterObject:ViewToPresenterFoodDetailProtocol?
     var cartList = [Cart]()
+    var totalPrice:String?
+    var price:Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,21 +32,26 @@ class FoodDetailViewController: UIViewController {
                 detailFoodName.text = foodName
                 detailFoodPrice.text = "\(foodPrice) ₺"
                 self.setFoodImage(foodPictureName: foodImageName)
+                price = Int(foodPrice)!
             }
         }
         
         FoodDetailRouter.createModule(ref: self)
 
-        detailStepper.wraps = true
-        detailStepper.autorepeat = true
         detailStepper.maximumValue = 10
+        
+        
+        if let price = price {
+            totalFoodPrice.text = "Toplam : \(price) ₺"
+        }
+        
 
     }
 
     @IBAction func addToCart(_ sender: Any) {
         if let food = food {
             if let foodName = food.yemek_adi, let foodPrice = food.yemek_fiyat, let foodImageName = food.yemek_resim_adi {
-                foodDetailPresenterObject?.addToCart(yemek_adi: foodName, yemek_resim_adi: foodImageName, yemek_fiyat: foodPrice, yemek_siparis_adet: String(self.foodCount), kullanici_adi: "Kürşat")
+                foodDetailPresenterObject?.addToCart(yemek_adi: foodName, yemek_resim_adi: foodImageName, yemek_fiyat: foodPrice, yemek_siparis_adet: String(self.foodCount), kullanici_adi: "kursat_simsek")
             }
         }
     }
@@ -51,6 +59,9 @@ class FoodDetailViewController: UIViewController {
     @IBAction func stepperAction(_ sender: UIStepper) {
         foodCount = Int(sender.value)
         detailFoodCount.text = "Adet : \(Int(sender.value).description)"
+        if let price = self.price {
+            totalFoodPrice.text = "Toplam : \(price * foodCount) ₺"
+        }
     }
     
     func setFoodImage(foodPictureName:String) {
