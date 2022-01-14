@@ -15,9 +15,19 @@ class CartTableViewCell: UITableViewCell {
     @IBOutlet weak var cartFoodTotal: UILabel!
     @IBOutlet weak var cartStepperOutlet: UIStepper!
     
+    var foodCount:Int = 1
+    var foodPrice:Int?
+    var stepValue:Double?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        if let count = Int(cartFoodCount.text!), let foodTotal = Int(cartFoodTotal.text!) {
+            foodCount = count
+            foodPrice = foodTotal
+        }
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,7 +36,12 @@ class CartTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func cartStepperAction(_ sender: Any) {
+    @IBAction func cartStepperAction(_ sender: UIStepper) {
+        foodCount = Int(sender.value) + foodCount
+        cartFoodCount.text = "Adet : \(foodCount))"
+        if let price = self.foodPrice {
+            cartFoodTotal.text = "\(foodCount * price) ₺"
+        }
     }
     
     func setFoodImage(foodPictureName:String) {

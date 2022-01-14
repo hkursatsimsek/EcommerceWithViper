@@ -33,7 +33,25 @@ class CartInteractor:PresenterToInteractorCartProtocol {
     }
     
     func deleteCartFood(sepet_yemek_id: Int, kullanici_adi: String) {
-        print("\(sepet_yemek_id) silindi")
+        let params:Parameters = [
+            "sepet_yemek_id":sepet_yemek_id,
+            "kullanici_adi":kullanici_adi
+        ]
+        
+        let url = "\(Environment.baseURL())/sepettenYemekSil.php"
+        
+        AF.request(url,method: .post, parameters: params).response { response in
+            if let data = response.data {
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] {
+                        print(json)
+                        self.getCartFoods(kullanici_adi: kullanici_adi)
+                    }
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
     
     

@@ -184,6 +184,7 @@
                         <outlet property="detailImageView" destination="OKH-Ua-qQK" id="7XA-pD-eyn"/>
                         <outlet property="detailStepper" destination="H4a-HH-psz" id="Rsj-TU-1t2"/>
                         <outlet property="totalFoodPrice" destination="flp-1U-2BK" id="gAY-aH-lFk"/>
+                        <segue destination="YFA-CT-hAo" kind="show" identifier="toCart" id="LId-Sb-e0B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eA0-oC-vSE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -218,7 +219,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1C-6s-Wf0">
-                                <rect key="frame" x="0.0" y="52" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="148" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Cart" id="Qn2-9d-fBF">
                                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="reply" id="zrI-hW-a25"/>
@@ -226,7 +227,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Zyz-lQ-Yos">
-                                <rect key="frame" x="5" y="96" width="414" height="668"/>
+                                <rect key="frame" x="5" y="192" width="414" height="572"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cartCell" rowHeight="139" id="yXX-8m-Ow2" customClass="CartTableViewCell" customModule="EcommerceWithViper" customModuleProvider="target">
@@ -332,6 +333,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="cart" catalog="system" id="fK3-0m-NNQ"/>
+                    <navigationItem key="navigationItem" id="9HE-FD-86s"/>
                     <connections>
                         <outlet property="cartTableView" destination="Zyz-lQ-Yos" id="095-LI-wMS"/>
                         <outlet property="cartTotal" destination="YpL-DE-NiQ" id="Rgn-Dz-jYA"/>
@@ -340,7 +342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PU8-8b-gTF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2728.985507246377" y="405.80357142857139"/>
+            <point key="canvasLocation" x="2729" y="439"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VWa-Ny-yt6">
@@ -362,6 +364,9 @@
             <point key="canvasLocation" x="955.07246376811599" y="71.651785714285708"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LId-Sb-e0B"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="homekit" catalog="system" width="128" height="106"/>

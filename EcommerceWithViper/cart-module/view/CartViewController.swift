@@ -57,13 +57,36 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
             cell.setFoodImage(foodPictureName: cartImageName)
             if let cFPrice = Int(cartFoodPrice), let cICount = Int(cartItemCount) {
                 cell.cartFoodTotal.text = "\(cFPrice * cICount) ₺"
+                cell.foodPrice = cFPrice
             }
         }
-        
-        
-        
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let silAction = UIContextualAction(style: .destructive, title: "Sil"){ (contextualAction,view,bool) in
+            let food = self.cartList[indexPath.row]
+           
+            let alert = UIAlertController(title: "Silme İşlemi", message: "\(food.yemek_adi!) silinsin mi ?", preferredStyle: .alert)
+            
+            let iptalAction = UIAlertAction(title: "İptal", style: .cancel){ action in}
+            alert.addAction(iptalAction)
+            
+            let evetAction = UIAlertAction(title: "Evet", style: .destructive){ action in
+                guard let cartId = food.sepet_yemek_id else { return }
+                guard let intCartId = Int(cartId) else { return }
+                self.cartPresenterObject?.deleteFood(sepet_yemek_id: intCartId, kullanici_adi: food.kullanici_adi ?? "kursat_simsek")
+                
+            }
+            alert.addAction(evetAction)
+            self.present(alert, animated: true)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [silAction])
+    }
 }
