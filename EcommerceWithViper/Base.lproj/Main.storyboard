@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Yemekler-->
+        <!--Yemekle Bizi-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="EcommerceWithViper" customModuleProvider="target" sceneMemberID="viewController">
@@ -85,7 +85,7 @@
                             <constraint firstItem="6AL-qk-88R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xqb-QC-fQs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Yemekler" id="KVv-mf-npI"/>
+                    <navigationItem key="navigationItem" title="Yemekle Bizi" id="KVv-mf-npI"/>
                     <connections>
                         <outlet property="foodCollectionView" destination="6AL-qk-88R" id="eBA-fl-I2U"/>
                         <segue destination="goz-Ny-0aa" kind="show" identifier="toDetail" id="trx-uT-y44"/>
@@ -208,6 +208,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="2Vz-pq-7d0">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.41231097239999998" blue="0.08054790211" alpha="0.8980392157" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" red="1" green="0.41231097239999998" blue="0.08054790211" alpha="0.8980392157" colorSpace="custom" customColorSpace="displayP3"/>
                         </textAttributes>
