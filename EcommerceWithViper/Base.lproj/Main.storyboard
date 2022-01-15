@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Foods-->
+        <!--Yemekler-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="EcommerceWithViper" customModuleProvider="target" sceneMemberID="viewController">
@@ -85,7 +85,7 @@
                             <constraint firstItem="6AL-qk-88R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xqb-QC-fQs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Foods" id="KVv-mf-npI"/>
+                    <navigationItem key="navigationItem" title="Yemekler" id="KVv-mf-npI"/>
                     <connections>
                         <outlet property="foodCollectionView" destination="6AL-qk-88R" id="eBA-fl-I2U"/>
                         <segue destination="goz-Ny-0aa" kind="show" identifier="toDetail" id="trx-uT-y44"/>
@@ -128,7 +128,16 @@
                                     <constraint firstAttribute="height" constant="47" id="jqM-vd-NkK"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="SEPETE EKLE"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="SEPETE EKLE">
+                                            <attributes>
+                                                <font key="NSFont" size="22" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="1" green="0.41231097239999998" blue="0.08054790211" alpha="0.8980392157" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="addToCart:" destination="goz-Ny-0aa" eventType="touchUpInside" id="530-nb-3Ns"/>
                                 </connections>
@@ -184,7 +193,6 @@
                         <outlet property="detailImageView" destination="OKH-Ua-qQK" id="7XA-pD-eyn"/>
                         <outlet property="detailStepper" destination="H4a-HH-psz" id="Rsj-TU-1t2"/>
                         <outlet property="totalFoodPrice" destination="flp-1U-2BK" id="gAY-aH-lFk"/>
-                        <segue destination="YFA-CT-hAo" kind="show" identifier="toCart" id="LId-Sb-e0B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eA0-oC-vSE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -200,6 +208,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="2Vz-pq-7d0">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="0.41231097239999998" blue="0.08054790211" alpha="0.8980392157" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -219,15 +230,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1C-6s-Wf0">
-                                <rect key="frame" x="0.0" y="148" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="52" width="414" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="0.41231097239999998" blue="0.08054790211" alpha="0.8980392157" colorSpace="custom" customColorSpace="displayP3"/>
+                                </textAttributes>
                                 <items>
-                                    <navigationItem title="Cart" id="Qn2-9d-fBF">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="reply" id="zrI-hW-a25"/>
+                                    <navigationItem title="Sepet" id="Qn2-9d-fBF">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="reply" id="zrI-hW-a25">
+                                            <connections>
+                                                <action selector="returnButton:" destination="YFA-CT-hAo" id="Uw0-1v-Rmh"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Zyz-lQ-Yos">
-                                <rect key="frame" x="5" y="192" width="414" height="572"/>
+                                <rect key="frame" x="5" y="96" width="414" height="668"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cartCell" rowHeight="139" id="yXX-8m-Ow2" customClass="CartTableViewCell" customModule="EcommerceWithViper" customModuleProvider="target">
@@ -256,7 +274,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" autorepeat="NO" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="w18-bb-RMj">
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" autorepeat="NO" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="w18-bb-RMj">
                                                     <rect key="frame" x="169" y="86" width="94" height="32"/>
                                                     <connections>
                                                         <action selector="cartStepperAction:" destination="yXX-8m-Ow2" eventType="valueChanged" id="zh9-v6-g0Y"/>
@@ -298,14 +316,18 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l33-ML-PRU">
-                                <rect key="frame" x="106.5" y="764" width="312.5" height="49"/>
+                                <rect key="frame" x="159" y="764" width="260" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="mUF-1U-n6a"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="ÖDEME YAP">
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                    <color key="baseBackgroundColor" red="1" green="0.41231097239999998" blue="0.08054790211" alpha="0.8980392157" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOPLAM : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YpL-DE-NiQ">
-                                <rect key="frame" x="5" y="764" width="96.5" height="49"/>
+                                <rect key="frame" x="5" y="764" width="149" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="UdI-cd-RnN"/>
                                 </constraints>
@@ -333,7 +355,6 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="cart" catalog="system" id="fK3-0m-NNQ"/>
-                    <navigationItem key="navigationItem" id="9HE-FD-86s"/>
                     <connections>
                         <outlet property="cartTableView" destination="Zyz-lQ-Yos" id="095-LI-wMS"/>
                         <outlet property="cartTotal" destination="YpL-DE-NiQ" id="Rgn-Dz-jYA"/>
@@ -353,6 +374,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="1" green="0.41231097239999998" blue="0.08054790211" alpha="0.8980392157" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="OLp-zD-4dI" kind="relationship" relationship="viewControllers" id="29O-FO-fb3"/>
@@ -364,9 +386,7 @@
             <point key="canvasLocation" x="955.07246376811599" y="71.651785714285708"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="LId-Sb-e0B"/>
-    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="1" green="0.41231097239999998" blue="0.08054790211" alpha="0.8980392157" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="homekit" catalog="system" width="128" height="106"/>

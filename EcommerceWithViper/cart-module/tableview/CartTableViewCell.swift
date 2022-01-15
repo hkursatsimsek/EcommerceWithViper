@@ -17,15 +17,11 @@ class CartTableViewCell: UITableViewCell {
     
     var foodCount:Int = 1
     var foodPrice:Int?
-    var stepValue:Double?
+    static var totalPrice:Int = 0
+    let defaults = UserDefaults.standard
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        if let count = Int(cartFoodCount.text!), let foodTotal = Int(cartFoodTotal.text!) {
-            foodCount = count
-            foodPrice = foodTotal
-        }
         
         
     }
@@ -37,17 +33,27 @@ class CartTableViewCell: UITableViewCell {
     }
     
     @IBAction func cartStepperAction(_ sender: UIStepper) {
-        foodCount = Int(sender.value) + foodCount
-        cartFoodCount.text = "Adet : \(foodCount))"
+        if (foodCount == 1) {
+            foodCount = Int(sender.value) + 1
+        } else if ( foodCount > 1 ) {
+            foodCount += 1
+        }
+        
+        cartFoodCount.text = "Adet : \(foodCount)"
         if let price = self.foodPrice {
             cartFoodTotal.text = "\(foodCount * price) ₺"
         }
+        
+        
     }
     
     func setFoodImage(foodPictureName:String) {
         if let url = URL(string: "\(Environment.baseURL())/resimler/\(foodPictureName)") {
             DispatchQueue.main.async {
                 self.cartImageView.kf.setImage(with: url)
+                if let total = Int(self.cartFoodTotal.text ?? "") {
+                    CartTableViewCell.totalPrice += total
+                }
             }
         }
     }

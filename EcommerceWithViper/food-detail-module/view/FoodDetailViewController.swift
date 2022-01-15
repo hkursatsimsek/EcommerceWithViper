@@ -52,6 +52,9 @@ class FoodDetailViewController: UIViewController {
         if let food = food {
             if let foodName = food.yemek_adi, let foodPrice = food.yemek_fiyat, let foodImageName = food.yemek_resim_adi {
                 foodDetailPresenterObject?.addToCart(yemek_adi: foodName, yemek_resim_adi: foodImageName, yemek_fiyat: foodPrice, yemek_siparis_adet: String(self.foodCount), kullanici_adi: "kursat_simsek")
+                let alert = UIAlertController(title: "Bilgi", message: "\(foodCount) adet \(foodName) sepetinize eklendi.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert,animated: true,completion: nil)
             }
         }
     }

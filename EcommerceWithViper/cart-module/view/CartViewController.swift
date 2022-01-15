@@ -16,6 +16,8 @@ class CartViewController: UIViewController {
     
     var cartPresenterObject:ViewToPresenterCartProtocol?
     
+    public static var total:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,16 +31,25 @@ class CartViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         cartPresenterObject?.getFoods(kullanici_adi: "kursat_simsek")
+        cartTotal.text = "TOPLAM : 0"
     }
     
-
+    @IBAction func returnButton(_ sender: Any) {
+        self.tabBarController?.selectedIndex = 0
+    }
+    
 }
 
 extension CartViewController: PresenterToViewCartProtocol {
     func sendToDataView(cartList: Array<Cart>) {
-        self.cartList = cartList
         DispatchQueue.main.async {
+            self.cartList = cartList
+            var totalPrice = 0
             self.cartTableView.reloadData()
+            for i in cartList {
+                totalPrice = totalPrice + (Int(i.yemek_fiyat!)! * Int(i.yemek_siparis_adet!)!)
+            }
+            self.cartTotal.text = "TOPLAM : \(totalPrice) ₺"
         }
     }
 }
@@ -58,6 +69,8 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
             if let cFPrice = Int(cartFoodPrice), let cICount = Int(cartItemCount) {
                 cell.cartFoodTotal.text = "\(cFPrice * cICount) ₺"
                 cell.foodPrice = cFPrice
+                cell.foodCount = cICount
+                
             }
         }
         return cell
